@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+  <title>Editar Taller</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2>Actualizar</h2>
+<a href="/" class="btn btn-default">Inicio</a>
+<br><br>
+<form method="post" action="/update">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Latitud</label>
+    <input type="text" name="person[latitud]" value="<%= person.latitud %>" class="form-control" id="exampleInputEmail1" placeholder="Latitud">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Longitud</label>
+    <input type="text" name="person[longitud]" value="<%= person.longitud %>" class="form-control" id="exampleInputEmail1" placeholder="Longitud">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre</label>
+    <input type="text" name="person[nombre]" class="form-control" value="<%= person.nombre %>" id="exampleInputEmail1" placeholder="Nombre">
+  </div>
+
+<input type="hidden" name="person[id]" value="<%= person.id %>">
+
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
